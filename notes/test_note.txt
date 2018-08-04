@@ -1,0 +1,37 @@
+World of testing Jargon
+
+  -Test Suit: This is the entire set of tests that accompanies your program or app. Think of it as all the tests for a project
+  
+  -Test: this describes a situation or context in which tests are run. EX. this test is about making sure you get an error message after trying to log in with the wrong password. A test can contain multiple assertions.
+
+  -Assertion: this is the actual verification step to confirm that the data returned by your program or application is indeed what is expected. You make one or more assertions within a test.
+
+Assertions
+
+  assert_equal   is an inherited instance method from somewhere up the hierarchy.   assert_equal takes two parameters: the first is the expected value, and the second is the test or actual value. If there's a discrepancy, assert_equal will save the error and Minitest will report that error to you at the end of the test run.
+
+SEAT Approach
+
+  In real world, there is a general approach to testing. 4 steps are involved
+
+  -Set up the necessary objects
+  -Execute the code against the objected we're testing
+  -Assert the results of the execution
+  -Tear down and clean up any lingering artifacts
+
+  We can use the `setup` method in our Test class in order to forgoe writing
+
+    car = Car.new
+
+  in every test_* method
+
+  the `setup` method will look like this..
+
+    def setup
+      @car = Car.new
+    end
+
+  We have to use an instance variable and not simply a local variable because if we use a lvar, it will not be available outside the setup method; and all of our test_* methods are, after all, instance methods. So we use an @ivar and consequently have to reference that @ivar in every test_* method.
+
+
+  So that takes care of the "S" in our approach. Up until now we had been merely using "EA". "E" has just been simple instantiation of a new Car object. Usually "EA" will suffice, and we have not talke about "T" Teardown, but just know about this approach for future reference.

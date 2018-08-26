@@ -1,7 +1,7 @@
 {
   "MiniTest": {
     "coverage": {
-      "/Users/nathanhayes/Documents/ls/c_130/lesson_2/todo_list.rb": [
+      "/Users/nathanhayes/Documents/launch_school/course_130/lesson_2/todo_list.rb": [
         1,
         1,
         1,
@@ -9,9 +9,9 @@
         1,
         null,
         1,
-        74,
-        74,
-        74,
+        77,
+        77,
+        77,
         null,
         null,
         1,
@@ -39,13 +39,13 @@
         1,
         null,
         1,
-        27,
-        27,
+        28,
+        28,
         null,
         null,
         1,
-        81,
-        79,
+        84,
+        82,
         null,
         null,
         1,
@@ -145,6 +145,6 @@
         null
       ]
     },
-    "timestamp": 1532489116
+    "timestamp": 1534474705
   }
 }

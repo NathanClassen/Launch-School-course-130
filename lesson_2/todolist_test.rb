@@ -6,7 +6,7 @@ Minitest::Reporters.use!
 
 require_relative 'todo_list'
 
-class TodoListTest < MiniTest::Test
+class TodoListTest < Minitest::Test
 
   def setup
     @todo1 = Todo.new("Buy milk")
@@ -168,6 +168,10 @@ class TodoListTest < MiniTest::Test
   def test_mark_done
     @list.mark_done('Clean room')
     assert(@list.item_at(1).done?)
+  end
+
+  def test_initialize
+    assert_raises(ArgumentError){TodoList.new}
   end
 
   def test_mark_all_undone
